@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Begum Jaan ♥️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #ffd6e0, #ffe6f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #4b004b;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px;
+    border-radius: 22px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 95%;
+    z-index: 1;
+}
+
+.container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #ffb6c1;
+    box-shadow: 0 0 20px rgba(255,105,180,0.6);
+}
+
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: #ff1493;
+}
+
+.message {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.age {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #ff69b4;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    width: 20px;
+    height: 20px;
+    background: #ff4f81;
+    transform: rotate(-45deg);
+    animation: floatUp linear infinite;
+    opacity: 0.9;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4f81;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(-45deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="begum_jaan.jpg" alt="Begum Jaan ♥️">
+
+    <h1>Begum Jaan ♥️</h1>
+
+    <div class="message">
+        <strong>My Dearest Begum Jaan ♥️</strong><br><br>
+
+        On this very special day, I want you to know how incredibly grateful I am to have you in my life.
+        Your birthday isn’t just a celebration of another year — it’s a celebration of all the joy,
+        laughter, and beautiful memories you bring to this world.<br><br>
+
+        You have this amazing ability to light up any room you enter, to make people smile even on their
+        darkest days, and to spread kindness wherever you go. Your heart is pure gold, and your spirit
+        is absolutely infectious.<br><br>
+
+        Thank you for being the wonderful, amazing, absolutely fantastic person that you are.
+        The world is so much brighter because you’re in it.
+    </div>
+
+    <div class="age">Turning 21 🎉</div>
+</div>
+
+<script>
+const heartsCount = 35;
+
+for (let i = 0; i < heartsCount; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+    heart.style.width = heart.style.height = (10 + Math.random() * 15) + 'px';
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+}
+</script>
+
+</body>
+</html>
